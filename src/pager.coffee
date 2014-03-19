@@ -192,7 +192,9 @@ $ ->
   $body = $ 'body'
   $body.delegate '.page-close', 'click', -> REPLIT.CloseLastPage()
 
-  # Bind page closing to Escape.
+  # Add Vim capability 
+
+  # Bind escape to vim escape
   $(window).keydown (e) ->
     if e.which == KEY_ESCAPE and $('.page:visible') isnt '#content-workspace'
       REPLIT.CloseLastPage()
